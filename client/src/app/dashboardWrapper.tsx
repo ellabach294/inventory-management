@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useEffect } from 'react'
 import Navbar from "@/app/(components)/Navbar";
@@ -11,7 +11,7 @@ const DashboardLayout = ({children} : {children: React.ReactNode}) => {
     (state) => state.global.isSidebarCollapsed
   );
 
-  const isDarkMode = useAppSelector((state) => state.global.isDarkMode)
+  const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
 
   useEffect(() => {
     if(isDarkMode) {
@@ -19,7 +19,7 @@ const DashboardLayout = ({children} : {children: React.ReactNode}) => {
     } else {
       document.documentElement.classList.add("light");
     }
-  }, [])
+  });
 
   return (
     <div className={`${isDarkMode ? "dark" : "light"} flex bg-gray-50 text-gray-900 w-full min-h-screen`}>
